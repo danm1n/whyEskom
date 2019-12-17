@@ -1,6 +1,6 @@
 # WhyEskom
 
-Simple app that gets current loadshedding status.
+Simple app that is made using react native and gets current loadshedding status from custom made rest api.
 
 Features included is as follows and not limited to:
 
