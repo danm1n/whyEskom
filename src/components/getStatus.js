@@ -19,9 +19,9 @@ export default class LoadsheddingStatus extends React.Component {
         let { stage } = this.state
         return (
             <View style={styles.textBG}>
-                <Text style={{ fontSize: 25 }}>Current Stage: 
-                <Text style={{fontWeight: 'bold'}}> {stage}</Text>
+                <Text style={{ fontSize: 25,color:'white' }}>Current Stage:
                 </Text>
+                <Text style={{fontWeight: 'bold',fontSize:25,color:'white'}}> {stage}</Text>
             </View>
         )
     }
@@ -31,7 +31,9 @@ export default class LoadsheddingStatus extends React.Component {
 const styles = StyleSheet.create({
 
     textBG: {
-        backgroundColor: 'grey',
+          justifyContent: 'center',
+            alignItems: 'center',
+        backgroundColor: 'black',
         padding:5,
         borderRadius:10
     }

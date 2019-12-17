@@ -25,6 +25,6 @@ const styles = StyleSheet.create({
     headingText: {
         fontSize: 60,
         fontWeight: 'bold',
-        marginBottom:50
+        marginBottom:15
     }
 });
