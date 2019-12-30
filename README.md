@@ -1,6 +1,6 @@
 # WhyEskom
 
-View loadshedding status quick and easy straight from your mobile.
+View loadshedding status quick and easy straight from your android powered smartphone.
 
 App that is made using react native and gets current loadshedding status from our api.
 
