@@ -1,5 +1,6 @@
 # WhyEskom
 
+View loadshedding status quick and easy straight from your mobile.
 Simple app that is made using react native and gets current loadshedding status from custom made rest api.
 
 Currently app is pulling from our api that is running on heroku on a free tier dyno, which sleeps somtimes and will take a few seconds for it to wakeup.
