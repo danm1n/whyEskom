@@ -10,4 +10,4 @@ Make sure that you have android 5.0+
 
 ## Trobule installing?
 
-Make sure you have **allow unknown sources** checked in settings, otherwise you wont be able to install app.
+Make sure you have **allow unknown sources** checked in settings, otherwise you wont be able to install the app.
