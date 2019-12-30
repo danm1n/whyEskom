@@ -5,11 +5,11 @@ Make sure that you have android 5.0+
 ## Version Changes
 
 ```bash 
-0.5.1 - first build, pulls from api and displays loadshedding status
+0.6.5 - added app icon, ui updates
 ```
 
 ```bash 
-0.6.5 - added app icon, ui updates
+0.5.1 - first build, pulls from api and displays loadshedding status
 ```
 
 ## Trouble installing?
