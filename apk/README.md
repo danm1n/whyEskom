@@ -7,3 +7,7 @@ Make sure that you have android 5.0+
 ```bash 0.5.1 - first build, pulls from api and displays loadshedding status```
 
 ```bash 0.6.5 - added app icon```
+
+## Trobule installing?
+
+Make sure you have **allow unknown sources** checked in settings, otherwise you wont be able to install app.
