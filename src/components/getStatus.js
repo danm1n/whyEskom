@@ -3,27 +3,37 @@ import { View, Text, StyleSheet } from 'react-native';
 
 
 export default class LoadsheddingStatus extends React.Component {
+    static navigationOptions = {
+        title: 'Current Loadshedding Status',
+    };
     state = {
-        stage: ''
+        stage: '',
+        loading: true
     }
 
     componentDidMount = () => {
         fetch('https://why-eskom.herokuapp.com/api/getStatus')
             .then(res => res.json())
             .then(response => {
-                this.setState({ stage: response.status })
+                this.setState({ loading:false, stage: response.status })
             })
     }
 
     render() {
-        let { stage } = this.state
-        return (
-            <View style={styles.textBG}>
-                <Text style={{ fontSize: 25,color:'white' }}>Current Stage:
-                </Text>
-                <Text style={{fontWeight: 'bold',fontSize:25,color:'white'}}> {stage}</Text>
-            </View>
-        )
+        let { stage, loading } = this.state
+        if (!loading) {
+            return (
+                <View style={styles.textBG}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 35, color: 'black' }}> {stage}</Text>
+                </View>
+            )
+        } else {
+            return (
+                <View style={styles.textBG}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 25}}>Loading...</Text>
+                </View>
+            )
+        }
     }
 
 }
@@ -31,10 +41,10 @@ export default class LoadsheddingStatus extends React.Component {
 const styles = StyleSheet.create({
 
     textBG: {
-          justifyContent: 'center',
-            alignItems: 'center',
-        backgroundColor: 'black',
-        padding:5,
-        borderRadius:10
+        paddingTop: 250,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 5,
+        borderRadius: 10
     }
 });

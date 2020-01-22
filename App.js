@@ -16,6 +16,9 @@ import {
   StatusBar,
 } from 'react-native';
 
+import { createSwitchNavigator, createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+
 import {
   Header,
   LearnMoreLinks,
@@ -24,21 +27,38 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import Homescreen from './src/pages/homescreen';
+import About from './src/pages/about';
+
 import LoadsheddingStatus from './src/components/getStatus';
 import Heading from './src/components/heading';
 import Footer from './src/components/footer';
 
-const App: () => React$Node = () => {
-  return (
-    <>
-          <View style={styles.status}>
-          <Heading />
-            <LoadsheddingStatus />
-            <Footer />
-          </View>
-    </>
-  );
-};
+// const App: () => React$Node = () => {
+//   return (
+//     <>
+//           <View style={styles.status}>
+//           <Heading />
+//             <LoadsheddingStatus />
+//             <Footer />
+//           </View>
+//     </>
+//   );
+// };
+
+const AppStack = createStackNavigator({ Home: Homescreen, viewStatus:LoadsheddingStatus, about:About });
+// const AuthStack = createStackNavigator({ SignIn: SignInScreen });
+
+export default createAppContainer(createSwitchNavigator(
+  {
+    // AuthLoading: AuthLoadingScreen,
+    App: AppStack,
+    // Auth: AuthStack,
+  }
+  // {
+    // initialRouteName: 'AuthLoading',
+  // }
+));
 
 const styles = StyleSheet.create({
   body: {
@@ -54,4 +74,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default App;
+
