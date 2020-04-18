@@ -1,6 +1,6 @@
 # WhyEskom
 
-View loadshedding status quick and easy straight from your android powered smartphone.
+View loadshedding status quick from your android powered smartphone, or view straight from your [browser](https://why-eskom.herokuapp.com/).
 Download app [here](https://github.com/incrediblejagur/whyEskom/tree/master/apk).
 
 App that is made using react native and gets current loadshedding status from our api.
